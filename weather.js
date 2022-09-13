@@ -58,7 +58,7 @@ function getWeather() {
                             weather.push(data.list[i].weather[0].main);
                         }
                         let forecast = processForecast(date, temp, weather);
-                        for (let i = 0; i < date.length-1; i++) {
+                        for (let i = 0; i < 4; i++) {
                             document.getElementById(`day${i}`).children[0].innerHTML = forecast.def_date[i];
                             document.getElementById(`day${i}`).children[1].className = icon_list[forecast.def_weather[i].toLowerCase()];
                             document.getElementById(`day${i}`).children[2].innerHTML = `${forecast.def_min[i]}°C/${forecast.def_max[i]}°C`;
@@ -106,7 +106,7 @@ function parisWeather() {
                         weather.push(data.list[i].weather[0].main);
                     }
                     let forecast = processForecast(date, temp, weather);
-                    for (let i = 0; i < date.length; i++) {
+                    for (let i = 0; i < 4; i++) {
                         document.getElementById(`day${i}`).children[0].innerHTML = forecast.def_date[i];
                         document.getElementById(`day${i}`).children[1].className = icon_list[forecast.def_weather[i].toLowerCase()];
                         document.getElementById(`day${i}`).children[2].innerHTML = `${forecast.def_min[i]}°C/${forecast.def_max[i]}°C`;
