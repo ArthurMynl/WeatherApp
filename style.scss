@@ -1,0 +1,405 @@
+$primary-color : #5BBA6F;
+$secondary-color : #137547;
+$black: #202621;
+$black75: #20262175;
+$black50: #20262150;
+$black25: #20262125;
+$black10: #20262110;
+$black5: #20262105;
+$error: #B55A19;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
+    font-style: normal;
+
+    h1 {
+        color: $black;
+        font-size : 5.653rem;
+        font-weight: 700;
+    }
+
+    h2 {
+        color: $black;
+        font-size : 3.998rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        color: $black;
+        font-size : 2.827rem;
+        font-weight: 300;
+    }
+
+    h4 {
+        color: $black;
+        font-size : 1.999rem;
+        font-weight: 700;
+    }
+
+
+    h5 {
+        color: $black;
+        font-size : 1.414rem;
+        font-weight: 700;
+    }
+
+    h6 {
+        color: $black;
+        font-size : 1rem;
+        font-weight: 700;
+    }
+
+    p {
+        color: $black75;
+        font-size : 1rem;
+        font-weight: 400;
+    }
+
+    body {
+        
+        .header {
+            background-color: $primary-color;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0px 64px;
+            gap: 128px; 
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            width: 100%;
+
+            form {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 16px 0px;
+                gap: 32px;
+                width : 60%;
+
+                .placeholder {
+                    color: $black75;
+                    font-size : 1rem;
+                    width: 70%;
+                    height: 52px;
+                    border: 1px solid #202621;
+                    border-radius: 8px;
+                    padding: 9px 37px;
+                    text-align: center;
+                }
+
+                .button {
+                    background-color: $secondary-color;
+                    color: #fff;
+                    font-size : 1rem;
+                    font-weight: bold;
+                    width: 30%;
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    height: 52px;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+
+        #error {
+            color: $error;
+            text-align : center;
+            width: 100%;
+            margin-top : 10px;
+        }
+
+        .current-weather {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px;
+            gap: 48px;
+            margin-top: 48px;
+
+            .title {
+                text-align: center;
+            }
+
+            .weather {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                gap: 48px;
+
+                .first-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0px;
+                    gap: 16px;
+
+                    i {
+                        font-size: 3rem;
+                    }
+                    
+                }
+
+                .v-bar {
+                    width: 80px;
+                    height: 0px;
+                    border: 1px solid $black50;
+                    transform: rotate(-90deg);
+                }
+
+
+                .more-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0px;
+                    gap: 16px;
+                }
+            }
+        }
+
+        .weather-forecast {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            gap: 48px;
+            margin-top: 48px;
+
+            .forecast {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 48px;
+
+                .division {
+                    display: flex;
+                    flex-direction: row;
+                    gap : 48px;
+                    align-items: center;
+
+
+                    .forecast-day {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 40px 64px;
+                        width: 196px;
+                        gap: 40px;
+                        background: $primary-color;
+                        border-radius: 32px;
+
+                        i {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        margin-top : 48px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 64px;
+        gap: 10px;
+        border-top: 1px solid $black25;
+
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 32px;
+
+            a {
+            color: $black;
+                
+                i {
+                    font-size: 2rem;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 1440px) {
+    body {
+        .header {
+            padding: 0 48px;
+            gap: 64px;
+        }
+    }
+}
+
+
+@media screen and (max-width : 1280px) {
+    body {
+        .header {
+            padding: 0 64px;
+            gap: 40px;
+
+            .sponsor {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    body {
+        .header {
+            
+            form {
+                width : 100%;
+
+                .placeholder {
+                    width : 60%;
+                }
+
+
+                .button {
+                    width : 30%;
+                }
+            }
+
+            .brand-name {
+                display: none;
+            }
+
+            .sponsor {
+                display: none;
+            }
+        }
+
+        .weather-forecast {
+            .forecast {
+                gap: 24px;
+
+                .division {
+                    gap: 24px;
+                }
+
+                .forecast-day {
+                    padding: 40px 48px;
+                    width: 172px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 900px){
+    body {
+        .weather-forecast {
+            .forecast {
+                flex-direction: column;
+                gap : 48px;
+
+                .division {
+                    gap: 48px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 768px) {
+    body {
+        .header {
+            padding: 0 48px;
+            gap: 128px;
+
+            .sponsor {
+                display: none;
+            }
+        }
+    }
+}
+
+@media  screen and (max-width : 600px){
+    body{
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    
+}
+
+@media screen and (max-width : 550px) {
+    body {
+        .weather-forecast {
+            .forecast {
+                flex-direction: column;
+                gap : 48px;
+
+                .division {
+                    gap: 48px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 480px) {
+    body {
+        .header {
+            form {
+                flex-direction: column;
+                gap : 16px;
+
+                .placeholder {
+                    width : 100%;
+                }
+
+                .button {
+                    width : 60%;
+                }
+            }
+        }
+
+
+        .current-weather {
+
+            .weather {
+
+                flex-direction: column;
+
+                .v-bar {
+                    display: none;
+                }
+            }
+        }
+
+        .weather-forecast {
+            .forecast {
+                flex-direction: column;
+                gap : 32px;
+
+                .division {
+                    flex-direction: column;
+                    gap: 32px;
+                }
+            }
+        }
+    }
+}

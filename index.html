@@ -1,0 +1,81 @@
+<head>
+    <title>Weather App</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ceb9c559da.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h5 class="brand-name">Weather App</h5>
+        <form name="weather-form" id="weather-form" method="post">
+            <input class="placeholder" type="text" name="city" placeholder="Search for a city">
+            <input class="button" type="submit" value="Weatherize">
+        </form>
+        <h6 class="sponsor">Powered by OpenWeather</h6>
+    </div>
+    <h5 id="error"></h5>
+    <div class="current-weather">
+        <h3 class="title" id="city">Current weather in Paris, France</h3>
+        <div class="weather">
+            <div class="first-info">
+                <h4 id="temperature">32°C</h4>
+                <i id="icon" class="fa-solid fa-sun"></i>
+            </div>
+            <div class="v-bar"></div>
+            <div class="more-info">
+                <p id="feels_like">Feeling like : 29°C</p>
+                <p id="humidity">Humidity: 60%</p>
+                <p id="description">Sunny</p>
+                <p id="wind">Wind: 5km/h</p>
+            </div>
+        </div>
+    </div>
+    <div class="weather-forecast">
+        <h3>4 days forecast</h3>
+        <div class="forecast">
+            <div class='division'>
+                <div class="forecast-day" id="day0">
+                    <h5>Monday</h5>
+                    <i class="fa-solid fa-sun"></i>
+                    <h5>16/32°C</h5>
+                    <h5>Cloudy</h5>
+                </div>
+                <div class="forecast-day" id="day1">
+                    <h5>Tuesday</h5>
+                    <i class="fa-solid fa-sun"></i>
+                    <h5>16/32°C</h5>
+                    <h5>Cloudy</h5>
+                </div>
+            </div>
+            <div class="division">
+                <div class="forecast-day" id="day2">
+                    <h5>Wednesday</h5>
+                    <i class="fa-solid fa-sun"></i>
+                    <h5>16/32°C</h5>
+                    <h5>Cloudy</h5>
+                </div>
+                <div class="forecast-day" id="day3">
+                    <h5>Thursday</h5>
+                    <i class="fa-solid fa-sun"></i>
+                    <h5>16/32°C</h5>
+                    <h5>Cloudy</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h6>© Arthur Meyniel 2022 - All rights reserved.</h6>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/arthurmeyniel/" target="_blank"><i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/ArthurMynl" target="blank"><i class="fa-brands fa-square-github"></i></a>
+        </div>
+    </footer>
+    <script src="./weather.js"></script>
+</body>
