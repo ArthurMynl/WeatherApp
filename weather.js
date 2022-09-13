@@ -127,7 +127,7 @@ function processForecast(date, temp, weather) {
     def_date = [];
     let current_date = today.getDate();
     for (let i = 0; i < date.length; i++) {
-        let day = new Date(date[i])
+        let day = new Date(transformDate(date[i])) // YYYY-MM-DDTHH:MM:SS
         if (day.getDate() != current_date) {
             temperature.push(Math.round(temp[i]))
             if (day.getHours() == 15) {
@@ -142,4 +142,10 @@ function processForecast(date, temp, weather) {
         }
     }
     return { def_min, def_max, def_weather, def_date };
+}
+
+
+function transformDate(date) {
+    let newDate = date.replace(" ", "T");
+    return newDate;
 }
